@@ -89,33 +89,91 @@ margin-block: 0;
     grid-area: 1 / 1 / 3 / 2;
     background-color: deepskyblue;
     color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+
+.sidebar span {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.sidebar .logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    
+}
+
+#logoDiamond {
+    font-size: 3rem;
 }
 
 .sidebar ul {
     padding-inline-start: 0;
     list-style-type: none;
 }
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+}
 .mainContent {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: repeat(2, 3fr) 2fr;
     gap: 20px;
+    padding: 20px;
 }
 
 .yourProjects {
     grid-column: 1 / 3;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 50px repeat(auto-fit, minmax(150px, 1fr));
 }
 
+.yourProjects h1{
+    grid-area: 1 / 1 / 2 / 3;
+}
 .card {
-    border-left: 5px solid orange;
+    border-left: 10px solid orange;
     border-radius: 10px;
     background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
-
+    padding: 15px;
+}
+.contentIcons {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    position: relative;
+    bottom: -10rem;
 }
 
 .sidebox {
     grid-area: 1 / 3 / 3 / 4;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px 1fr;
+    height: 50vh;
+}
+
+.announcements {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
+    padding: 15px;
+}
+
+.trending {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
+    padding: 15px;
 }
 
 .searchBox {
